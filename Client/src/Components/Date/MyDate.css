@@ -1,0 +1,16 @@
+.wrapperDate {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.statText {
+  margin-right: 10px;
+  color: rgb(3, 75, 65);
+}
+.dateInput {
+  text-align: center;
+  border-style: none;
+  border-radius: 10px;
+  color: rgb(3, 75, 65);
+}
