@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       voted_number: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       createdAt: {

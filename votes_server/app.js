@@ -8,10 +8,10 @@ const cors = require("cors");
 
 app.use(cors());
 app.use(bodyParser);
+app.use(logsMiddleware);
 
-
-app.post("/votes", logsMiddleware, votesController.addVote);
-app.post("/statistic", logsMiddleware, votesController.getVotesByDate);
+app.post("/votes", votesController.addVote);
+app.post("/statistic", votesController.getVotesByDate);
 app.get("/logs", logsController.getLogs);
 
 module.exports = app;

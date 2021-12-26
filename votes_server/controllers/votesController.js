@@ -1,5 +1,6 @@
 const { Votes, sequelize } = require("../models");
 const { addDays, format } = require("date-fns");
+const createHttpError = require("http-errors");
 
 module.exports.addVote = async (req, res, next) => {
   try {
@@ -8,7 +9,7 @@ module.exports.addVote = async (req, res, next) => {
 
     res.send(newVote);
   } catch (error) {
-    next(error);
+    next(createHttpError(error));
   }
 };
 module.exports.getVotesByDate = async (req, res, next) => {
@@ -35,6 +36,6 @@ module.exports.getVotesByDate = async (req, res, next) => {
 
     res.send(results);
   } catch (error) {
-    next(error);
+    next(createHttpError(error));
   }
 };

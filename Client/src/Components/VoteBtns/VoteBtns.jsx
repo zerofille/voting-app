@@ -22,6 +22,7 @@ function VoteBtns({ setModalActive, date }) {
         {initialState.data.map((i) => {
           return (
             <button
+              key={i.voted_number}
               className="numberBtn"
               onClick={() => closeWindow(i.voted_number)}
             >

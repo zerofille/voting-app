@@ -14,7 +14,17 @@ module.exports = (sequelize, DataTypes) => {
   }
   Votes.init(
     {
-      voted_number: { type: DataTypes.STRING, allowNull: false },
+      voted_number: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validate: {
+          isValid(num) {
+            if (num < 1 || num > 9) {
+              throw new Error("Number is not valid");
+            }
+          },
+        },
+      },
     },
 
     {
