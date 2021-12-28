@@ -14,4 +14,8 @@ app.post("/votes", votesController.addVote);
 app.post("/statistic", votesController.getVotesByDate);
 app.get("/logs", logsController.getLogs);
 
+app.use((err, req, res, next) => {
+  res.send(err);
+});
+
 module.exports = app;
