@@ -17,10 +17,7 @@ function Logs(props) {
           return (
             <li className="dataWrapper">
               <p className="logData">url:{i.url}</p>
-              <p className="logData">
-                {/* body:{i.json.date || i.json.voted_number} */}
-                body:{JSON.stringify(i.json)}
-              </p>
+              <p className="logData">body:{JSON.stringify(i.json)}</p>
               <p className="logData">date:{i.createdAt}</p>
             </li>
           );

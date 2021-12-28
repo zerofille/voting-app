@@ -14,7 +14,6 @@ function VoteBtns({ setModalActive, date }) {
     );
   };
 
-  console.log(initialState.data);
   return (
     <div className="wrapper">
       <h1 className="text">Vote for your favorite number!</h1>
