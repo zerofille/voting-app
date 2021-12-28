@@ -11,6 +11,6 @@ export const getLogs = async () => {
   return await httpClient.get("/logs");
 };
 export const getVotesByDate = async (date) => {
-  console.log(date);
+  
   return await httpClient.post("/statistic", date);
 };
